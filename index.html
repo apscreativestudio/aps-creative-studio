@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APS Creative Studio | Vellore</title>
+<style>
+:root{--ink:#171311;--cream:#fff8ef;--gold:#caa56a;--muted:#756b62;--card:#fffdf9}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{background:#171311;color:#fff8ef;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:16px;position:sticky;top:0;z-index:5}
+.brand{font-weight:800;letter-spacing:1.5px}.brand span{display:block;color:var(--gold);font-size:11px;letter-spacing:3px;margin-top:4px}
+nav a{color:#fff8ef;text-decoration:none;margin-left:16px;font-size:13px}
+.hero{padding:68px 6% 60px;background:linear-gradient(115deg,#171311 0%,#302019 70%,#57351f 100%);color:#fff8ef}
+.eyebrow{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:11px;font-weight:bold}
+h1{font-family:Georgia,serif;font-size:clamp(40px,7vw,72px);line-height:1.02;max-width:680px;margin:16px 0}
+.hero p{max-width:520px;color:#e8dcd0;line-height:1.7}
+.btn{border:0;border-radius:999px;padding:13px 20px;background:var(--gold);color:#171311;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;margin:8px 8px 0 0}
+.btn.dark{background:#171311;color:#fff8ef;border:1px solid #6f5a43}
+section{padding:42px 6%}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+h2{font-family:Georgia,serif;font-size:32px;margin:0 0 8px}.sub{color:var(--muted);line-height:1.6;margin:0 0 22px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.product{background:var(--card);border:1px solid #eadfce;border-radius:16px;overflow:hidden}
+.product .visual{height:150px;background:linear-gradient(140deg,#321e17,#805337);display:grid;place-items:center;font-size:54px}
+.product:nth-child(2) .visual{background:linear-gradient(140deg,#50301f,#bd8757)}
+.product:nth-child(3) .visual{background:linear-gradient(140deg,#f2d8ba,#8a5132)}
+.product:nth-child(4) .visual{background:linear-gradient(140deg,#f2c8d3,#b33b63)}
+.product:nth-child(5) .visual{background:linear-gradient(140deg,#ead6ad,#a87a35)}
+.product:nth-child(6) .visual{background:linear-gradient(140deg,#f6e7d6,#8c6b58)}
+.productbody{padding:16px}.product h3{margin:0 0 7px;font-size:17px}.product p{color:var(--muted);font-size:13px;line-height:1.5;min-height:38px}.price{font-weight:800;font-size:18px}.add{width:100%;margin-top:12px}
+.cart{background:#f0e4d4;border-radius:18px;padding:22px;max-width:780px}.cartrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #d8c6b0}.qty button{border:0;background:#fff;border-radius:50%;width:28px;height:28px;font-size:17px;cursor:pointer}.qty span{display:inline-block;min-width:25px;text-align:center}
+.total{display:flex;justify-content:space-between;font-weight:800;font-size:20px;padding-top:16px}.note{font-size:12px;color:var(--muted);line-height:1.6}
+footer{background:#171311;color:#fff8ef;padding:32px 6%;line-height:1.8}footer a{color:var(--gold)}
+@media(max-width:600px){nav a{margin-left:8px;font-size:12px}.hero{padding-top:48px}section{padding-top:34px;padding-bottom:34px}}
+</style>
+</head>
+<body>
+<header><div class="brand">APS CREATIVE STUDIO<span>MADE WITH LOVE</span></div><nav><a href="#menu">Menu</a><a href="#cart">Cart <b id="cartCount">0</b></a></nav></header>
+<div class="hero"><div class="eyebrow">Handcrafted treats · Vellore</div><h1>A little sweetness.<br>A lot of love.</h1><p>Premium brownies, cookies, chocolate treats and customized gifts — made to make your moments special.</p><a class="btn" href="#menu">Explore Menu</a><a class="btn dark" href="#cart">Build Your Order</a></div>
+<section id="menu"><div class="sectionhead"><div><h2>Our favourites</h2><p class="sub">Choose your treats and add them to your cart.</p></div></div><div class="products" id="products"></div></section>
+<section id="cart"><h2>Your cart</h2><p class="sub">Check your items, then send your order to WhatsApp.</p><div class="cart"><div id="cartItems">Your cart is empty. Add a treat from the menu.</div><div class="total"><span>Total</span><span id="total">₹0</span></div><button class="btn" onclick="checkout()">Order via WhatsApp</button><p class="note">Delivery charges, availability and final order details will be confirmed on WhatsApp. Online payment can be added after setting up a payment gateway.</p></div></section>
+<footer><b>APS Creative Studio</b><br>Handcrafted desserts & customized gifts · Vellore<br><a href="#" onclick="alert('Replace this link with your Instagram profile URL.');return false">Instagram</a> · <span>WhatsApp ordering</span><p class="note">Starter demo website. Replace the sample contact details and confirm product prices before publishing.</p></footer>
+<script>
+const products=[
+{id:1,name:"Classic Fudge Brownie",desc:"Rich, fudgy chocolate brownie.",price:39,emoji:"🍫"},
+{id:2,name:"Nutella Brownie",desc:"A chocolatey treat for extra indulgence.",price:89,emoji:"🤎"},
+{id:3,name:"Mini Cookies",desc:"Bite-sized cookies for sharing.",price:79,emoji:"🍪"},
+{id:4,name:"Rose Milk Tres Leches",desc:"A creamy rose-milk dessert.",price:99,emoji:"🌹"},
+{id:5,name:"Customized Chocolate Gift",desc:"Personalized chocolate gifts for occasions.",price:149,emoji:"🎁"},
+{id:6,name:"Chocolate Strawberry",desc:"Fresh strawberry with chocolate dip.",price:69,emoji:"🍓"}
+];
+const cart={};
+const productRoot=document.getElementById('products');
+productRoot.innerHTML=products.map(p=>`<article class="product"><div class="visual" aria-hidden="true">${p.emoji}</div><div class="productbody"><h3>${p.name}</h3><p>${p.desc}</p><div class="price">₹${p.price}</div><button class="btn add" onclick="add(${p.id})">Add to cart</button></div></article>`).join('');
+function add(id){cart[id]=(cart[id]||0)+1;renderCart()}
+function change(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
+function renderCart(){
+const ids=Object.keys(cart);document.getElementById('cartCount').textContent=ids.reduce((s,id)=>s+cart[id],0);
+document.getElementById('cartItems').innerHTML=ids.length?ids.map(id=>{const p=products.find(x=>x.id==id);return `<div class="cartrow"><div><b>${p.name}</b><br><small>₹${p.price} × ${cart[id]}</small></div><div class="qty"><button onclick="change(${id},-1)">−</button><span>${cart[id]}</span><button onclick="change(${id},1)">+</button></div><b>₹${p.price*cart[id]}</b></div>`}).join(''):'Your cart is empty. Add a treat from the menu.';
+document.getElementById('total').textContent='₹'+ids.reduce((s,id)=>s+products.find(p=>p.id==id).price*cart[id],0);
+}
+function checkout(){
+const ids=Object.keys(cart);if(!ids.length){alert('Macha, first add a product to your cart!');return}
+const lines=ids.map(id=>{const p=products.find(x=>x.id==id);return `${p.name} x ${cart[id]} = ₹${p.price*cart[id]}`});
+const total=ids.reduce((s,id)=>s+products.find(p=>p.id==id).price*cart[id],0);
+const message=`Hi APS Creative Studio! I would like to place an order:\n${lines.join('\n')}\nTotal: ₹${total}\nName:\nDelivery/pickup area:\nPreferred date/time:`;
+const whatsappNumber='916379139837'; // Replace with your WhatsApp number, country code included, digits only.
+if(whatsappNumber.includes('X')){alert('Website demo: replace 91XXXXXXXXXX in the file with your WhatsApp number to activate ordering.');return}
+window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,'_blank');
+}
+</script>
+</body>
+</html>
