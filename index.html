@@ -3,82 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17110d">
+<meta name="description" content="APS Creative Studio in Vellore — brownies, mini cookies, rose milk tres leches and customized return gifts.">
 <title>APS Creative Studio | Vellore</title>
 <style>
-:root{--ink:#171311;--cream:#fff8ef;--gold:#caa56a;--muted:#756b62;--card:#fffdf9}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-header{background:#171311;color:#fff8ef;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:16px;position:sticky;top:0;z-index:5}
-.brand{font-weight:800;letter-spacing:1.5px}.brand span{display:block;color:var(--gold);font-size:11px;letter-spacing:3px;margin-top:4px}
-nav a{color:#fff8ef;text-decoration:none;margin-left:16px;font-size:13px}
-.hero{padding:68px 6% 60px;background:linear-gradient(115deg,#171311 0%,#302019 70%,#57351f 100%);color:#fff8ef}
-.eyebrow{color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:11px;font-weight:bold}
-h1{font-family:Georgia,serif;font-size:clamp(40px,7vw,72px);line-height:1.02;max-width:680px;margin:16px 0}
-.hero p{max-width:520px;color:#e8dcd0;line-height:1.7}
-.btn{border:0;border-radius:999px;padding:13px 20px;background:var(--gold);color:#171311;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;margin:8px 8px 0 0}
-.btn.dark{background:#171311;color:#fff8ef;border:1px solid #6f5a43}
-section{padding:42px 6%}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
-h2{font-family:Georgia,serif;font-size:32px;margin:0 0 8px}.sub{color:var(--muted);line-height:1.6;margin:0 0 22px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
-.product{background:var(--card);border:1px solid #eadfce;border-radius:16px;overflow:hidden}
-.product .visual{height:150px;background:linear-gradient(140deg,#321e17,#805337);display:grid;place-items:center;font-size:54px}
-.product:nth-child(2) .visual{background:linear-gradient(140deg,#50301f,#bd8757)}
-.product:nth-child(3) .visual{background:linear-gradient(140deg,#f2d8ba,#8a5132)}
-.product:nth-child(4) .visual{background:linear-gradient(140deg,#f2c8d3,#b33b63)}
-.product:nth-child(5) .visual{background:linear-gradient(140deg,#ead6ad,#a87a35)}
-.product:nth-child(6) .visual{background:linear-gradient(140deg,#f6e7d6,#8c6b58)}
-.productbody{padding:16px}.product h3{margin:0 0 7px;font-size:17px}.product p{color:var(--muted);font-size:13px;line-height:1.5;min-height:38px}.price{font-weight:800;font-size:18px}.add{width:100%;margin-top:12px}
-.cart{background:#f0e4d4;border-radius:18px;padding:22px;max-width:780px}.cartrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #d8c6b0}.qty button{border:0;background:#fff;border-radius:50%;width:28px;height:28px;font-size:17px;cursor:pointer}.qty span{display:inline-block;min-width:25px;text-align:center}
-.total{display:flex;justify-content:space-between;font-weight:800;font-size:20px;padding-top:16px}.note{font-size:12px;color:var(--muted);line-height:1.6}
-footer{background:#171311;color:#fff8ef;padding:32px 6%;line-height:1.8}footer a{color:var(--gold)}
-@media(max-width:600px){nav a{margin-left:8px;font-size:12px}.hero{padding-top:48px}section{padding-top:34px;padding-bottom:34px}}
+:root{--bg:#100d0b;--panel:#1d1713;--panel2:#261d17;--gold:#d9ad66;--cream:#fff7eb;--muted:#c5b6a5;--line:#49372a;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.topbar{background:#090706;color:var(--gold);text-align:center;padding:8px 12px;font-size:12px;letter-spacing:1px}.header{position:sticky;top:0;z-index:10;background:rgba(16,13,11,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px max(4%,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{height:58px;width:58px;object-fit:contain;border-radius:50%}.brand-title{font-weight:800;letter-spacing:1.5px;font-size:16px}.brand-sub{font-size:10px;letter-spacing:3px;color:var(--gold)}.nav{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}.nav a:hover{color:var(--gold)}.cart-pill{background:var(--gold);color:#1a1008;border:0;border-radius:999px;padding:10px 14px;font-weight:800;white-space:nowrap}.hero{max-width:1180px;margin:auto;padding:58px 5% 48px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:700}.hero h1{font-family:Georgia,serif;font-size:clamp(38px,6vw,68px);line-height:1.04;margin:14px 0}.hero h1 em{color:var(--gold);font-weight:400}.hero p{color:var(--muted);max-width:510px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;font-weight:700}.btn.primary{background:var(--gold);color:#1a1008}.btn.secondary{color:var(--cream)}.hero-art{min-height:300px;border:1px solid #5a4029;border-radius:18px;background:radial-gradient(ellipse at 50% 35%,#59331c 0,#25170f 45%,#130e0b 75%);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;position:relative;overflow:hidden}.hero-art:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #8a6134;border-radius:50%;opacity:.55}.hero-art-inner{position:relative}.hero-art .monogram{font-family:Georgia,serif;font-size:clamp(54px,8vw,90px);color:var(--gold);line-height:1}.hero-art h2{font-family:Georgia,serif;font-size:28px;margin:10px 0 2px}.hero-art p{margin:0;color:#e4c99f}.section{max-width:1180px;margin:auto;padding:30px 5% 55px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.section h2{font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);margin:4px 0}.section-head p{color:var(--muted);margin:0;font-size:14px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:8px 13px;border-radius:999px;font-size:12px}.filter.active,.filter:hover{background:var(--gold);color:#1a1008;border-color:var(--gold)}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .2s,border-color .2s}.product:hover{transform:translateY(-3px);border-color:var(--gold)}.product-visual{height:150px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#654024,#2b1b11 60%,#1a120d);font-size:54px}.product:nth-child(3n+2) .product-visual{background:radial-gradient(circle at 50% 45%,#76513a,#2b1b11 60%,#1a120d)}.product:nth-child(3n) .product-visual{background:radial-gradient(circle at 50% 45%,#e1c7a3,#483023 60%,#1a120d)}.product-content{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}.category{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold)}.product h3{font-size:15px;line-height:1.3;margin:0}.desc{font-size:12px;color:var(--muted);margin:0;flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px}.price{font-size:18px;font-weight:800;color:var(--gold)}.price small{font-size:10px;font-weight:400;color:var(--muted)}.add{border:0;border-radius:7px;background:var(--gold);color:#1a1008;padding:9px 12px;font-weight:800;font-size:12px}.add:disabled{opacity:.7;cursor:default}.order-note{border:1px solid var(--line);border-radius:12px;padding:18px;color:var(--muted);font-size:13px;margin-top:24px}.order-note strong{color:var(--gold)}.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}.about-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.about-card h3{font-family:Georgia,serif;font-size:24px;margin:0 0 8px}.about-card p{color:var(--muted);font-size:14px;margin:0}.contact-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}.footer{border-top:1px solid var(--line);padding:28px 5%;text-align:center;color:var(--muted);font-size:12px}.footer strong{color:var(--gold)}.floating-wa{position:fixed;right:17px;bottom:17px;z-index:20;background:var(--green);color:#071b0e;padding:13px 17px;border-radius:999px;font-weight:800;box-shadow:0 5px 22px #0008}.cart-overlay{position:fixed;inset:0;background:#0009;z-index:30;display:none}.cart-overlay.open{display:block}.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(430px,100%);background:#17110d;border-left:1px solid var(--line);padding:22px;overflow:auto}.cart-head{display:flex;justify-content:space-between;align-items:center}.cart-head h2{font-family:Georgia,serif;margin:0}.close{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:7px;padding:6px 10px}.cart-items{margin:18px 0}.cart-item{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.cart-item small{display:block;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{border:1px solid var(--line);background:var(--panel);color:var(--cream);border-radius:5px;width:26px;height:26px}.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;border-top:1px solid var(--line);padding-top:16px}.checkout{width:100%;margin-top:18px;background:var(--green);color:#06210e;border:0;border-radius:8px;padding:13px;font-weight:800}.empty{color:var(--muted);font-size:14px}.hidden{display:none!important}
+@media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding-top:38px}.nav{gap:10px}}
+@media(max-width:650px){.header{padding:10px 4%}.brand img{height:48px;width:48px}.brand-title{font-size:13px}.brand-sub{font-size:8px;letter-spacing:2px}.nav{display:none}.hero{grid-template-columns:1fr;padding:38px 5% 25px;gap:22px}.hero-art{min-height:220px}.section{padding:24px 4% 40px}.section-head{display:block}.section-head p{margin-top:5px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-visual{height:115px;font-size:43px}.product-content{padding:11px}.product h3{font-size:13px}.desc{font-size:11px}.price{font-size:16px}.add{padding:8px 9px}.about{grid-template-columns:1fr}.floating-wa{right:12px;bottom:12px;padding:11px 14px;font-size:13px}}
 </style>
 </head>
 <body>
-<header>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <img src="aps-logo.png" alt="APS Creative Studio" style="height:60px;width:60px;object-fit:contain;display:block;">
-    <div class="brand">
-      APS CREATIVE STUDIO
-      <span>MADE WITH LOVE</span>
-    </div>
-  </div>
-  <nav>
-    <a href="#menu">Menu</a>
-    <a href="#cart">Cart <b id="cartCount">0</b></a>
-  </nav>
+<div class="topbar">HANDCRAFTED TREATS & CUSTOM GIFTS · VELLORE</div>
+<header class="header">
+  <a class="brand" href="#home" aria-label="APS Creative Studio home">
+    <img src="aps-logo.png" alt="APS Creative Studio logo" onerror="this.style.display='none'">
+    <span><span class="brand-title">APS CREATIVE STUDIO</span><span class="brand-sub">MADE WITH LOVE</span></span>
+  </a>
+  <nav class="nav"><a href="#products">Menu</a><a href="#custom-gifts">Custom Gifts</a><a href="#contact">Contact</a></nav>
+  <button class="cart-pill" id="openCart" type="button">🛒 Cart (<span id="cartCount">0</span>)</button>
 </header>
-<div class="hero"><div class="eyebrow">Handcrafted treats · Vellore</div><h1>A little sweetness.<br>A lot of love.</h1><p>Premium brownies, cookies, chocolate treats and customized gifts — made to make your moments special.</p><a class="btn" href="#menu">Explore Menu</a><a class="btn dark" href="#cart">Build Your Order</a></div>
-<section id="menu"><div class="sectionhead"><div><h2>Our favourites</h2><p class="sub">Choose your treats and add them to your cart.</p></div></div><div class="products" id="products"></div></section>
-<section id="cart"><h2>Your cart</h2><p class="sub">Check your items, then send your order to WhatsApp.</p><div class="cart"><div id="cartItems">Your cart is empty. Add a treat from the menu.</div><div class="total"><span>Total</span><span id="total">₹0</span></div><button class="btn" onclick="checkout()">Order via WhatsApp</button><p class="note">Delivery charges, availability and final order details will be confirmed on WhatsApp. Online payment can be added after setting up a payment gateway.</p></div></section>
-<footer><b>APS Creative Studio</b><br>Handcrafted desserts & customized gifts · Vellore<br><a href="#" onclick="alert('https://www.instagram.com/customized._.productz?stkn=MWttYnFtaHBxMTYydg==.');return false">Instagram</a> · <span>WhatsApp ordering</span><p class="note">Starter demo website. Replace the sample contact details and confirm product prices before publishing.</p></footer>
+<main id="home">
+<section class="hero">
+  <div><div class="eyebrow">A little sweetness, a lot of love</div><h1>Make every bite<br><em>special.</em></h1><p>From rich, fudgy brownies to delightful desserts and personalized return gifts — made to make your moments memorable.</p><div class="hero-actions"><a class="btn primary" href="#products">Explore Our Menu</a><a class="btn secondary" href="#custom-gifts">Custom Gifts</a></div></div>
+  <div class="hero-art"><div class="hero-art-inner"><div class="monogram">APS</div><h2>Sweet moments start here</h2><p>Brownies · Desserts · Custom Gifts</p></div></div>
+</section>
+<section class="section" id="products">
+  <div class="section-head"><div><div class="eyebrow">Our menu</div><h2>Made for chocolate lovers</h2></div><p>Choose your favourites and order on WhatsApp.</p></div>
+  <div class="filters" id="filters"><button class="filter active" data-filter="all">All Products</button><button class="filter" data-filter="brownie">Brownies</button><button class="filter" data-filter="dessert">Desserts & Cookies</button><button class="filter" data-filter="gift">Custom Gifts</button></div>
+  <div class="products" id="productGrid"></div>
+  <div class="order-note"><strong>Custom gift orders:</strong> Customized chocolate return gifts and customized water bottles are ₹20 per piece, with a minimum order of 100 pieces. Please message us to discuss customization and availability.</div>
+</section>
+<section class="section" id="custom-gifts"><div class="section-head"><div><div class="eyebrow">Made personal</div><h2>Gifts with your touch</h2></div></div><div class="about"><div class="about-card"><h3>Customized Chocolate Return Gifts</h3><p>Personalized chocolate gifts for birthdays, celebrations and special occasions. ₹20 per piece · Minimum 100 pieces.</p><div class="contact-row"><button class="btn primary" onclick="askCustom('Customized Chocolate Return Gift')">Enquire on WhatsApp</button></div></div><div class="about-card"><h3>Customized Water Bottles</h3><p>Customized bottles for events and return gifts. ₹20 per piece · Minimum 100 pieces.</p><div class="contact-row"><button class="btn primary" onclick="askCustom('Customized Water Bottle')">Enquire on WhatsApp</button></div></div></div></section>
+<section class="section" id="contact"><div class="about"><div class="about-card"><div class="eyebrow">Say hello</div><h3>Let’s make it special.</h3><p>Have a question or want to place a custom order? Contact APS Creative Studio on WhatsApp.</p><div class="contact-row"><a class="btn primary" href="https://wa.me/916379139837" target="_blank" rel="noopener">Chat on WhatsApp</a></div></div><div class="about-card"><div class="eyebrow">Find us</div><h3>APS Creative Studio</h3><p>Vellore, Tamil Nadu<br>Brownies · Desserts · Customized Gifts</p><p style="margin-top:12px">Prices are listed per item unless a minimum quantity is mentioned. Please confirm availability and delivery charges when ordering.</p></div></div></section>
+</main>
+<footer class="footer">© <span id="year"></span> <strong>APS Creative Studio</strong> · Made with love in Vellore</footer>
+<a class="floating-wa" href="https://wa.me/916379139837" target="_blank" rel="noopener">☏ WhatsApp</a>
+<div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Shopping cart"><div class="cart-panel"><div class="cart-head"><h2>Your Cart</h2><button class="close" id="closeCart" type="button">Close ✕</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div><button class="checkout" id="checkout" type="button">Order on WhatsApp</button><p style="font-size:11px;color:var(--muted)">Delivery charges, availability and custom-order details will be confirmed on WhatsApp.</p></div></div>
 <script>
-const products=[
-{id:1,name:"Classic Fudge Brownie",desc:"Rich, fudgy chocolate brownie.",price:39,emoji:"🍫"},
-{id:2,name:"Nutella Brownie",desc:"A chocolatey treat for extra indulgence.",price:89,emoji:"🤎"},
-{id:3,name:"Mini Cookies",desc:"Bite-sized cookies for sharing.",price:79,emoji:"🍪"},
-{id:4,name:"Rose Milk Tres Leches",desc:"A creamy rose-milk dessert.",price:99,emoji:"🌹"},
-{id:5,name:"Customized Chocolate Gift",desc:"Personalized chocolate gifts for occasions.",price:149,emoji:"🎁"},
-{id:6,name:"Chocolate Strawberry",desc:"Fresh strawberry with chocolate dip.",price:69,emoji:"🍓"}
+const products = [
+ {id:1,name:'Classic Fudge Brownie',price:39,category:'brownie',emoji:'🍫',desc:'Rich, chewy and deeply chocolaty.'},
+ {id:2,name:'Choco Chips Brownie',price:49,category:'brownie',emoji:'🍪',desc:'Fudgy brownie with chocolate chips.'},
+ {id:3,name:'Dark Chocolate Brownie',price:59,category:'brownie',emoji:'🍫',desc:'Bold dark chocolate flavour.'},
+ {id:4,name:'White Chocolate Brownie',price:69,category:'brownie',emoji:'🤍',desc:'Chocolate brownie with white chocolate.'},
+ {id:5,name:'Milk Chocolate Brownie',price:59,category:'brownie',emoji:'🍫',desc:'Smooth and creamy milk chocolate taste.'},
+ {id:6,name:'Triple Chocolate Brownie',price:89,category:'brownie',emoji:'🍫',desc:'A rich treat for triple-chocolate lovers.'},
+ {id:7,name:'Nuts Chocolate Brownie',price:69,category:'brownie',emoji:'🥜',desc:'Chocolate brownie with crunchy nuts.'},
+ {id:8,name:'KitKat Chocolate Brownie',price:69,category:'brownie',emoji:'🍫',desc:'Brownie with a crunchy chocolate twist.'},
+ {id:9,name:'Biscoff Chocolate Brownie',price:69,category:'brownie',emoji:'🍪',desc:'Chocolate brownie with Biscoff flavour.'},
+ {id:10,name:'Mini Cookies with Choco Chips',price:99,category:'dessert',emoji:'🍪',desc:'Mini cookies packed with chocolate chips.'},
+ {id:11,name:'Rose Milk Tres Leches',price:99,category:'dessert',emoji:'🍰',desc:'A creamy rose-milk dessert.'},
+ {id:12,name:'Customized Chocolate Return Gift',price:20,category:'gift',emoji:'🎁',desc:'Personalized return gifts · Minimum 100 pieces.',min:100},
+ {id:13,name:'Customized Water Bottle',price:20,category:'gift',emoji:'🧴',desc:'Customized bottles · Minimum 100 pieces.',min:100}
 ];
-const cart={};
-const productRoot=document.getElementById('products');
-productRoot.innerHTML=products.map(p=>`<article class="product"><div class="visual" aria-hidden="true">${p.emoji}</div><div class="productbody"><h3>${p.name}</h3><p>${p.desc}</p><div class="price">₹${p.price}</div><button class="btn add" onclick="add(${p.id})">Add to cart</button></div></article>`).join('');
-function add(id){cart[id]=(cart[id]||0)+1;renderCart()}
-function change(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
-function renderCart(){
-const ids=Object.keys(cart);document.getElementById('cartCount').textContent=ids.reduce((s,id)=>s+cart[id],0);
-document.getElementById('cartItems').innerHTML=ids.length?ids.map(id=>{const p=products.find(x=>x.id==id);return `<div class="cartrow"><div><b>${p.name}</b><br><small>₹${p.price} × ${cart[id]}</small></div><div class="qty"><button onclick="change(${id},-1)">−</button><span>${cart[id]}</span><button onclick="change(${id},1)">+</button></div><b>₹${p.price*cart[id]}</b></div>`}).join(''):'Your cart is empty. Add a treat from the menu.';
-document.getElementById('total').textContent='₹'+ids.reduce((s,id)=>s+products.find(p=>p.id==id).price*cart[id],0);
+const cart = {};
+const grid = document.getElementById('productGrid');
+function renderProducts(filter='all'){
+ grid.innerHTML='';
+ products.filter(p=>filter==='all'||p.category===filter).forEach(p=>{
+  const card=document.createElement('article');card.className='product';
+  card.innerHTML=`<div class="product-visual" aria-hidden="true">${p.emoji}</div><div class="product-content"><div class="category">${p.category==='brownie'?'Brownie':p.category==='dessert'?'Dessert & Cookies':'Custom Gift'}</div><h3>${p.name}</h3><p class="desc">${p.desc}</p><div class="product-bottom"><div class="price">₹${p.price}<small> / ${p.min?'piece':'item'}</small></div><button class="add" type="button" data-add="${p.id}">Add +</button></div></div>`;
+  grid.appendChild(card);
+ });
 }
-function checkout(){
-const ids=Object.keys(cart);if(!ids.length){alert('Macha, first add a product to your cart!');return}
-const lines=ids.map(id=>{const p=products.find(x=>x.id==id);return `${p.name} x ${cart[id]} = ₹${p.price*cart[id]}`});
-const total=ids.reduce((s,id)=>s+products.find(p=>p.id==id).price*cart[id],0);
-const message=`Hi APS Creative Studio! I would like to place an order:\n${lines.join('\n')}\nTotal: ₹${total}\nName:\nDelivery/pickup area:\nPreferred date/time:`;
-const whatsappNumber='916379139837'; // Replace with your WhatsApp number, country code included, digits only.
-if(whatsappNumber.includes('X')){alert('Website demo: replace 91XXXXXXXXXX in the file with your WhatsApp number to activate ordering.');return}
-window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,'_blank');
+function updateCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById('cartCount').textContent=count;
+ const box=document.getElementById('cartItems');box.innerHTML='';let total=0;
+ products.filter(p=>cart[p.id]).forEach(p=>{const qty=cart[p.id];total+=qty*p.price;const row=document.createElement('div');row.className='cart-item';row.innerHTML=`<div><strong>${p.name}</strong><small>₹${p.price} each${p.min?' · Min. '+p.min+' pieces':''}</small><div class="qty"><button type="button" data-qty="${p.id}" data-delta="-1" aria-label="Remove one">−</button><span>${qty}</span><button type="button" data-qty="${p.id}" data-delta="1" aria-label="Add one">+</button></div></div><strong>₹${qty*p.price}</strong>`;box.appendChild(row)});
+ if(!count)box.innerHTML='<p class="empty">Your cart is empty. Add something delicious from the menu!</p>';
+ document.getElementById('cartTotal').textContent='₹'+total;
 }
+grid.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(!b)return;const id=Number(b.dataset.add);cart[id]=(cart[id]||0)+1;updateCart();b.textContent='Added ✓';setTimeout(()=>{b.textContent='Add +'},700)});
+document.getElementById('cartItems').addEventListener('click',e=>{const b=e.target.closest('[data-qty]');if(!b)return;const id=Number(b.dataset.qty);cart[id]=(cart[id]||0)+Number(b.dataset.delta);if(cart[id]<=0)delete cart[id];updateCart()});
+// Reliable product category filters: each button gets its own click handler.
+document.querySelectorAll('#filters .filter[data-filter]').forEach(button=>{
+ button.addEventListener('click',()=>{
+  const selectedFilter=button.getAttribute('data-filter') || 'all';
+  document.querySelectorAll('#filters .filter').forEach(item=>item.classList.toggle('active',item===button));
+  renderProducts(selectedFilter);
+ });
+});
+const overlay=document.getElementById('cartOverlay');document.getElementById('openCart').addEventListener('click',()=>overlay.classList.add('open'));document.getElementById('closeCart').addEventListener('click',()=>overlay.classList.remove('open'));overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.classList.remove('open')});
+document.getElementById('checkout').addEventListener('click',()=>{const selected=products.filter(p=>cart[p.id]);if(!selected.length){alert('Macha, first cart-la product add pannunga!');return}let lines=['Hi APS Creative Studio! I would like to place an order:',''];let total=0;selected.forEach(p=>{const q=cart[p.id];total+=q*p.price;lines.push(`${p.name} x ${q} = ₹${q*p.price}${p.min?' (Minimum order '+p.min+' pieces applies)':''}`)});lines.push('',`Subtotal: ₹${total}`,'Please confirm availability, delivery charges and order details.');window.open('https://wa.me/916379139837?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener')});
+function askCustom(name){const p=products.find(x=>x.name===name);const msg=`Hi APS Creative Studio! I am interested in ${name}. Price shown: ₹${p.price} per piece; minimum order ${p.min} pieces. Please share customization options and availability.`;window.open('https://wa.me/916379139837?text='+encodeURIComponent(msg),'_blank','noopener')}
+document.getElementById('year').textContent=new Date().getFullYear();renderProducts();updateCart();
 </script>
 </body>
 </html>
