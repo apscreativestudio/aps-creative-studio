@@ -34,7 +34,19 @@ footer{background:#171311;color:#fff8ef;padding:32px 6%;line-height:1.8}footer a
 </style>
 </head>
 <body>
-<header><div class="brand">APS CREATIVE STUDIO<span>MADE WITH LOVE</span></div><nav><a href="#menu">Menu</a><a href="#cart">Cart <b id="cartCount">0</b></a></nav></header>
+<header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="aps-logo.png" alt="APS Creative Studio" style="height:60px;width:60px;object-fit:contain;display:block;">
+    <div class="brand">
+      APS CREATIVE STUDIO
+      <span>MADE WITH LOVE</span>
+    </div>
+  </div>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart <b id="cartCount">0</b></a>
+  </nav>
+</header>
 <div class="hero"><div class="eyebrow">Handcrafted treats · Vellore</div><h1>A little sweetness.<br>A lot of love.</h1><p>Premium brownies, cookies, chocolate treats and customized gifts — made to make your moments special.</p><a class="btn" href="#menu">Explore Menu</a><a class="btn dark" href="#cart">Build Your Order</a></div>
 <section id="menu"><div class="sectionhead"><div><h2>Our favourites</h2><p class="sub">Choose your treats and add them to your cart.</p></div></div><div class="products" id="products"></div></section>
 <section id="cart"><h2>Your cart</h2><p class="sub">Check your items, then send your order to WhatsApp.</p><div class="cart"><div id="cartItems">Your cart is empty. Add a treat from the menu.</div><div class="total"><span>Total</span><span id="total">₹0</span></div><button class="btn" onclick="checkout()">Order via WhatsApp</button><p class="note">Delivery charges, availability and final order details will be confirmed on WhatsApp. Online payment can be added after setting up a payment gateway.</p></div></section>
