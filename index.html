@@ -127,8 +127,8 @@ function askCustom(name){const p=products.find(x=>x.name===name);const msg=`Hi A
 document.getElementById('year').textContent=new Date().getFullYear();renderProducts();updateCart();
 
 // Supabase public connection settings: replace these two placeholders before publishing.
-const SUPABASE_URL = 'https://tplgbtvzxgxgxadcbikus.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx';
+const SUPABASE_URL = 'https://tplgbtvzxxgxadcbikus.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'Sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx';
 const reviewsRoot = document.getElementById('approvedReviews');
 function supabaseReady(){return SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('PASTE_') && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');}
 async function loadApprovedReviews(){
