@@ -1,745 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APS Creative Studio | Luxury Personalized Gifts & Keepsakes</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17110d">
+<meta name="description" content="APS Creative Studio in Vellore — brownies, mini cookies, rose milk tres leches and customized return gifts.">
+<title>APS Creative Studio | Vellore</title>
+<style>
+:root{--bg:#100d0b;--panel:#1d1713;--panel2:#261d17;--gold:#d9ad66;--cream:#fff7eb;--muted:#c5b6a5;--line:#49372a;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.topbar{background:#090706;color:var(--gold);text-align:center;padding:8px 12px;font-size:12px;letter-spacing:1px}.header{position:sticky;top:0;z-index:10;background:rgba(16,13,11,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px max(4%,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{height:58px;width:58px;object-fit:contain;border-radius:50%}.brand-title{font-weight:800;letter-spacing:1.5px;font-size:16px}.brand-sub{font-size:10px;letter-spacing:3px;color:var(--gold)}.nav{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}.nav a:hover{color:var(--gold)}.cart-pill{background:var(--gold);color:#1a1008;border:0;border-radius:999px;padding:10px 14px;font-weight:800;white-space:nowrap}.hero{max-width:1180px;margin:auto;padding:58px 5% 48px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:700}.hero h1{font-family:Georgia,serif;font-size:clamp(38px,6vw,68px);line-height:1.04;margin:14px 0}.hero h1 em{color:var(--gold);font-weight:400}.hero p{color:var(--muted);max-width:510px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:8px;padding:12px 18px;font-weight:700}.btn.primary{background:var(--gold);color:#1a1008}.btn.secondary{color:var(--cream)}.hero-art{min-height:300px;border:1px solid #5a4029;border-radius:18px;background:radial-gradient(ellipse at 50% 35%,#59331c 0,#25170f 45%,#130e0b 75%);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;position:relative;overflow:hidden}.hero-art:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #8a6134;border-radius:50%;opacity:.55}.hero-art-inner{position:relative;z-index:1}.hero-logo{width:clamp(100px,18vw,175px);height:clamp(100px,18vw,175px);object-fit:contain;border-radius:50%;filter:drop-shadow(0 8px 24px #0009);margin-bottom:8px}.hero-art .monogram{font-family:Georgia,serif;font-size:clamp(54px,8vw,90px);color:var(--gold);line-height:1}.hero-art h2{font-family:Georgia,serif;font-size:28px;margin:10px 0 2px}.hero-art p{margin:0;color:#e4c99f}.section{max-width:1180px;margin:auto;padding:30px 5% 55px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.section h2{font-family:Georgia,serif;font-size:clamp(28px,4vw,40px);margin:4px 0}.section-head p{color:var(--muted);margin:0;font-size:14px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:8px 13px;border-radius:999px;font-size:12px}.filter.active,.filter:hover{background:var(--gold);color:#1a1008;border-color:var(--gold)}.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .2s,border-color .2s}.product:hover{transform:translateY(-3px);border-color:var(--gold)}.product-visual{height:170px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#654024,#2b1b11 60%,#1a120d);font-size:54px;overflow:hidden}.product-visual img{width:100%;height:100%;object-fit:cover;display:block}.product-visual .emoji-fallback{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:54px}.product-content{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}.category{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold)}.product h3{font-size:15px;line-height:1.3;margin:0}.desc{font-size:12px;color:var(--muted);margin:0;flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px}.price{font-size:18px;font-weight:800;color:var(--gold)}.price small{font-size:10px;font-weight:400;color:var(--muted)}.add{border:0;border-radius:7px;background:var(--gold);color:#1a1008;padding:9px 12px;font-weight:800;font-size:12px}.add:disabled{opacity:.7;cursor:default}.order-note{border:1px solid var(--line);border-radius:12px;padding:18px;color:var(--muted);font-size:13px;margin-top:24px}.order-note strong{color:var(--gold)}.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}.about-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.about-card h3{font-family:Georgia,serif;font-size:24px;margin:0 0 8px}.about-card p{color:var(--muted);font-size:14px;margin:0}.contact-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}.footer{border-top:1px solid var(--line);padding:28px 5%;text-align:center;color:var(--muted);font-size:12px}.footer strong{color:var(--gold)}.floating-wa{position:fixed;right:17px;bottom:17px;z-index:20;background:var(--green);color:#071b0e;padding:13px 17px;border-radius:999px;font-weight:800;box-shadow:0 5px 22px #0008}.cart-overlay{position:fixed;inset:0;background:#0009;z-index:30;display:none}.cart-overlay.open{display:block}.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(430px,100%);background:#17110d;border-left:1px solid var(--line);padding:22px;overflow:auto}.cart-head{display:flex;justify-content:space-between;align-items:center}.cart-head h2{font-family:Georgia,serif;margin:0}.close{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:7px;padding:6px 10px}.cart-items{margin:18px 0}.cart-item{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.cart-item small{display:block;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{border:1px solid var(--line);background:var(--panel);color:var(--cream);border-radius:5px;width:26px;height:26px}.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;border-top:1px solid var(--line);padding-top:16px}.checkout{width:100%;margin-top:18px;background:var(--green);color:#06210e;border:0;border-radius:8px;padding:13px;font-weight:800}.empty{color:var(--muted);font-size:14px}.hidden{display:none!important}
+@media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding-top:38px}.nav{gap:10px}}
+@media(max-width:650px){.header{padding:10px 4%}.brand img{height:48px;width:48px}.brand-title{font-size:13px}.brand-sub{font-size:8px;letter-spacing:2px}.nav{display:none}.hero{grid-template-columns:1fr;padding:38px 5% 25px;gap:22px}.hero-art{min-height:220px}.section{padding:24px 4% 40px}.section-head{display:block}.section-head p{margin-top:5px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-visual{height:115px;font-size:43px}.product-content{padding:11px}.product h3{font-size:13px}.desc{font-size:11px}.price{font-size:16px}.add{padding:8px 9px}.about{grid-template-columns:1fr}.floating-wa{right:12px;bottom:12px;padding:11px 14px;font-size:13px}}
 
-  <!-- Google Fonts & Font Awesome Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+/* Premium reference-inspired desktop layout */
+.topbar{display:none}.header{min-height:78px;padding:8px max(4%,calc((100% - 1240px)/2));background:#090806}.brand{gap:0}.brand img{height:64px;width:64px;border-radius:0}.brand>span{display:none}.nav{display:flex;gap:32px;color:#fff;font-size:13px}.nav a:first-child{color:#f4cd82;border-bottom:2px solid #d9ad66;padding:12px 0}.header-actions{display:flex;align-items:center;gap:18px}.search-btn,.ig-head{border:0;background:transparent;color:#f7d99a;font-size:25px;line-height:1;padding:4px}.cart-pill{position:relative;background:transparent;color:#f7d99a;border:0;padding:4px;font-size:19px}.cart-count{display:inline-flex;align-items:center;justify-content:center;background:#f7d99a;color:#160f08;border-radius:50%;font-size:10px;width:16px;height:16px;vertical-align:top}.ig-head{font-size:27px}.order-head{border:1px solid #d9ad66;border-radius:999px;padding:8px 15px;font-size:11px;color:#fff;white-space:nowrap}
+.hero{max-width:none;min-height:360px;padding:30px 6%;display:grid;grid-template-columns:1.05fr .95fr 60px;gap:20px;position:relative;overflow:hidden;border-bottom:1px solid #47301b;background:radial-gradient(ellipse at 10% 85%,#663513 0,transparent 30%),radial-gradient(ellipse at 82% 80%,#572b16 0,transparent 30%),radial-gradient(ellipse at 50% 0,#2d180c 0,transparent 55%),linear-gradient(100deg,#080706,#1a0d07 50%,#090706)}.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(120deg,transparent 0 100px,#9d5e1b12 102px 105px);pointer-events:none}.hero-brand-art,.hero-copy{position:relative;z-index:1;align-self:center}.hero-brand-art{text-align:center}.banner-logo{display:none}.banner-wordmark{font-family:Georgia,serif;font-size:clamp(80px,14vw,170px);font-weight:bold;letter-spacing:-6px;line-height:.9;color:#d6a24c;text-shadow:0 2px 2px #fff4b0,0 6px 18px #000,0 0 25px #a66a21}.banner-wordmark span{display:block;letter-spacing:clamp(4px,.9vw,11px);font-size:clamp(14px,2.2vw,27px);font-weight:normal;margin-top:16px;color:#e3c48b}.hero-copy h1{font-family:cursive;font-size:clamp(30px,4vw,52px);font-weight:400;font-style:italic;line-height:1.12;color:#f7d18c;margin:0 0 24px;transform:rotate(-3deg)}.hero-copy h1 em{font-weight:400}.hero-categories{font-family:Georgia,serif;font-size:12px;letter-spacing:2px;color:#e9d4af;white-space:nowrap}.hero-categories b{color:#d9ad66;margin:0 7px}.hero-heart{text-align:center;color:#f7d18c;margin-top:18px;letter-spacing:3px}.hero-instagram{z-index:2;align-self:center;justify-self:end;text-align:center;border-left:1px solid #6a4828;padding:8px 0 8px 15px;color:#fff;font-size:12px}.hero-instagram span{font-size:32px;color:#f3a1c1;display:block}.hero-instagram small{font-size:9px;line-height:1.4}.hero-instagram b{font-size:11px}
+.section{max-width:1280px;padding:18px 4% 38px}.product-title{text-align:center;margin:2px 0 20px}.product-title h2{display:flex;align-items:center;justify-content:center;gap:35px;font-size:32px;color:#e9b64d;margin:0 0 2px}.product-title h2:before,.product-title h2:after{content:"";width:85px;height:1px;background:#c69a53}.product-title p{margin:0;color:#eee;font-size:13px}.product-search-wrap{display:none}.filters{justify-content:center;margin:0 0 22px;gap:16px}.filter{padding:9px 25px;border-color:#a17b43;color:#fff;font-size:12px}.filter.active,.filter:hover{background:#f3d18a;color:#1a1008}.products{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px 16px}.product{background:#080706;border-color:#5b452c;border-radius:8px}.product-visual{height:145px;background:#160d07}.product-content{padding:10px 9px;gap:5px;text-align:center}.category,.desc{display:none}.product h3{font-size:12px;min-height:30px;display:flex;align-items:center;justify-content:center}.product-bottom{display:flex;flex-direction:column;gap:7px;margin-top:0}.price{font-size:16px}.price small.minimum{display:block;font-size:9px;line-height:1.2;color:#ddd}.add{width:100%;border:1px solid #d9ad66;background:transparent;color:#fff;border-radius:999px;padding:6px 5px;font-size:11px}.add:hover{background:#d9ad66;color:#170f08}.order-note{display:none}.footer{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:18px;text-align:left;padding:24px 5%;border-top:1px solid #49372a}.footer p{margin:6px 0}.footer strong{font-family:Georgia,serif;font-size:25px}.footer a:hover{color:#e9b64d}
+@media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding-top:28px;grid-template-columns:1fr 1fr 45px}.nav{gap:14px}.order-head{display:none}}
+@media(max-width:650px){.header{padding:8px 3%;min-height:65px}.brand img{height:48px;width:48px}.nav{display:none}.header-actions{gap:9px}.search-btn{font-size:22px}.ig-head{font-size:23px}.hero{grid-template-columns:1fr 1fr 35px;min-height:210px;padding:22px 3%;gap:7px}.banner-wordmark{font-size:clamp(52px,14vw,82px);letter-spacing:-3px}.banner-wordmark span{font-size:10px;letter-spacing:2px;margin-top:8px}.hero-copy h1{font-size:clamp(19px,5vw,29px);margin-bottom:12px}.hero-categories{font-size:7px;letter-spacing:.6px}.hero-categories b{margin:0 2px}.hero-heart{font-size:10px;margin-top:8px}.hero-instagram{padding-left:5px}.hero-instagram span{font-size:22px}.hero-instagram small{font-size:7px}.section{padding:18px 3% 28px}.product-title h2{font-size:25px;gap:10px}.product-title h2:before,.product-title h2:after{width:25px}.product-title p{font-size:10px}.filters{gap:6px;margin-bottom:17px}.filter{padding:8px 11px;font-size:10px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-visual{height:130px}.product-content{padding:8px 7px}.product h3{font-size:11px;min-height:29px}.price{font-size:15px}.add{font-size:10px}.footer{grid-template-columns:1fr 1fr;padding:20px 4%;font-size:11px}}
 
-  <!-- Supabase JS Client CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+/* Premium polish: refined depth, motion, and accessible search */
+:root{--gold:#e2b96f;--line:#5b432b}
+::selection{background:#e2b96f;color:#170f08}
+.product{box-shadow:0 8px 24px #0003;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.product:hover{transform:translateY(-5px);box-shadow:0 14px 30px #0007,0 0 0 1px #d9ad6630}
+.product-visual img{transition:transform .35s ease}
+.product:hover .product-visual img{transform:scale(1.04)}
+.order-head,.filter,.add,.cart-pill,.floating-wa{transition:background .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease}
+.order-head:hover{background:var(--gold);color:#170f08}
+.btn:focus-visible,.filter:focus-visible,.add:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f7d99a;outline-offset:3px}
+.product-search-wrap{display:block;max-width:440px;margin:0 auto 16px}
+.product-search-wrap input{display:none;width:100%;background:#17110d;border:1px solid var(--line);border-radius:999px;padding:12px 16px;color:var(--cream);outline:none}
+.product-search-wrap input.visible{display:block;animation:searchReveal .2s ease-out}
+.product-search-wrap input::placeholder{color:#b9a995}
+@keyframes searchReveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
-  <style>
-    :root {
-      --bg-dark: #0a0a0a;
-      --card-bg: #141414;
-      --card-border: #262626;
-      --gold-primary: #d4af37;
-      --gold-light: #f3e5ab;
-      --gold-dark: #997d25;
-      --gold-gradient: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%);
-      --text-white: #ffffff;
-      --text-muted: #b3b3b3;
-      --success: #4bb543;
-      --danger: #ff4d4d;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4, .brand-font {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 1px;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    /* Navigation */
-    header {
-      background: rgba(10, 10, 10, 0.95);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-    }
-
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-links a {
-      color: var(--gold-light);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold-primary);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 70px 0 50px;
-      text-align: center;
-      background: radial-gradient(circle at center, #1f1b13 0%, var(--bg-dark) 70%);
-      border-bottom: 1px solid var(--card-border);
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      color: var(--gold-light);
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      color: var(--text-muted);
-      max-width: 650px;
-      margin: 0 auto 25px;
-      font-size: 1.05rem;
-    }
-
-    /* Section Headings */
-    .section-title {
-      text-align: center;
-      margin: 60px 0 35px;
-    }
-
-    .section-title h2 {
-      font-size: 2rem;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* Product Grid */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-
-    .product-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s, border-color 0.3s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold-primary);
-    }
-
-    .product-img {
-      width: 100%;
-      height: 220px;
-      background: #1a1a1a;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      border: 1px dashed var(--gold-dark);
-      color: var(--gold-primary);
-      font-size: 2.8rem;
-    }
-
-    .product-title {
-      font-size: 1.25rem;
-      color: var(--gold-light);
-      margin-bottom: 8px;
-    }
-
-    .product-desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-      flex-grow: 1;
-    }
-
-    .product-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-      padding-top: 15px;
-      border-top: 1px solid var(--card-border);
-    }
-
-    .product-price {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--gold-primary);
-    }
-
-    .btn-gold {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold-gradient);
-      color: #000;
-      padding: 10px 18px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.3s;
-    }
-
-    .btn-gold:hover {
-      opacity: 0.9;
-    }
-
-    /* Feedback & Reviews Section */
-    .feedback-section {
-      padding: 60px 0 80px;
-      border-top: 1px solid var(--card-border);
-      background: radial-gradient(circle at center, #161410 0%, var(--bg-dark) 80%);
-    }
-
-    .feedback-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    @media (max-width: 868px) {
-      .feedback-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Feedback Form */
-    .feedback-form-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    }
-
-    .feedback-form-box h3 {
-      color: var(--gold-light);
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--gold-light);
-      font-size: 0.9rem;
-    }
-
-    .form-control {
-      width: 100%;
-      background: #1c1c1c;
-      border: 1px solid var(--card-border);
-      padding: 12px 14px;
-      border-radius: 6px;
-      color: #ffffff;
-      font-size: 0.95rem;
-      transition: border-color 0.3s;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: var(--gold-primary);
-    }
-
-    /* Star Rating Selector */
-    .star-rating-selector {
-      display: flex;
-      gap: 8px;
-      font-size: 1.6rem;
-      cursor: pointer;
-      color: #444;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-    }
-
-    .star-rating-selector input {
-      display: none;
-    }
-
-    .star-rating-selector label {
-      cursor: pointer;
-      transition: color 0.2s;
-      margin-bottom: 0;
-    }
-
-    .star-rating-selector label:hover,
-    .star-rating-selector label:hover ~ label,
-    .star-rating-selector input:checked ~ label {
-      color: var(--gold-primary);
-    }
-
-    .form-notice {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 6px;
-    }
-
-    #form-status {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      display: none;
-      padding: 10px;
-      border-radius: 6px;
-      text-align: center;
-    }
-
-    #form-status.success {
-      background: rgba(75, 181, 67, 0.15);
-      border: 1px solid var(--success);
-      color: #79f772;
-      display: block;
-    }
-
-    #form-status.error {
-      background: rgba(255, 77, 77, 0.15);
-      border: 1px solid var(--danger);
-      color: #ff9999;
-      display: block;
-    }
-
-    /* Approved Reviews Container */
-    .reviews-list-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .reviews-list-header {
-      color: var(--gold-light);
-      font-size: 1.4rem;
-      margin-bottom: 5px;
-    }
-
-    .reviews-scroll {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      max-height: 520px;
-      overflow-y: auto;
-      padding-right: 8px;
-    }
-
-    .reviews-scroll::-webkit-scrollbar {
-      width: 6px;
-    }
-    .reviews-scroll::-webkit-scrollbar-thumb {
-      background: #333;
-      border-radius: 4px;
-    }
-
-    .review-item {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-left: 3px solid var(--gold-primary);
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .review-item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .reviewer-name {
-      font-weight: 600;
-      color: var(--gold-light);
-      font-size: 1rem;
-    }
-
-    .review-stars {
-      color: var(--gold-primary);
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-    }
-
-    .review-text {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .review-date {
-      font-size: 0.75rem;
-      color: #666;
-      margin-top: 10px;
-      text-align: right;
-    }
-
-    .no-reviews-msg {
-      color: var(--text-muted);
-      font-style: italic;
-      text-align: center;
-      padding: 30px;
-      background: var(--card-bg);
-      border: 1px dashed var(--card-border);
-      border-radius: 8px;
-    }
-
-    /* Footer */
-    footer {
-      background: #050505;
-      border-top: 1px solid var(--card-border);
-      padding: 40px 0 25px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .social-links a {
-      color: var(--gold-light);
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-
-    .social-links a:hover {
-      color: var(--gold-primary);
-    }
-  </style>
+.feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.feedback-form{display:grid;gap:12px}.feedback-form label{font-size:12px;color:var(--gold);display:grid;gap:6px}.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;background:#100c09;color:var(--cream);border:1px solid #5b452c;border-radius:8px;padding:12px;font:inherit}.feedback-form textarea{min-height:110px;resize:vertical}.feedback-hint{font-size:12px;color:var(--muted)}.stars{color:#e9b64d;font-size:22px;letter-spacing:3px}@media(max-width:650px){.feedback-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
+<div class="topbar">HANDCRAFTED TREATS & CUSTOM GIFTS · VELLORE</div>
+<header class="header">
+  <a class="brand" href="#home" aria-label="APS Creative Studio home">
+    <img src="aps-logo.png" alt="APS Creative Studio logo" onerror="this.style.display='none'">
+    <span><span class="brand-title">APS CREATIVE STUDIO</span><span class="brand-sub">MADE WITH LOVE</span></span>
+  </a>
+  <nav class="nav"><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+  <div class="header-actions"><button class="search-btn" id="toggleSearch" type="button" aria-label="Search products" aria-expanded="false">⌕</button><button class="cart-pill" id="openCart" type="button">🛒 <span class="cart-count" id="cartCount">0</span></button><a class="ig-head" href="https://www.instagram.com/customized._.productz/" target="_blank" rel="noopener" aria-label="Instagram">◎</a><a class="order-head" href="https://wa.me/916379139837" target="_blank" rel="noopener">☏ Order on WhatsApp</a></div>
+</header>
+<main id="home">
+<section class="hero" id="home">
+  <div class="hero-brand-art"><img src="aps-logo.png" alt="APS Creative Studio logo" class="banner-logo"><div class="banner-wordmark">APS<span>CREATIVE STUDIO</span></div></div>
+  <div class="hero-copy"><h1>Small Bites...<br><em>Big Happiness...</em></h1><p class="hero-categories">BROWNIES <b>|</b> DESSERTS <b>|</b> CUSTOM GIFTS</p><div class="hero-heart">──── ♡ ────</div></div>
+  <a class="hero-instagram" href="https://www.instagram.com/customized._.productz/" target="_blank" rel="noopener"><span>◎</span><small>Follow us on<br><b>Instagram</b><br>→</small></a>
+</section>
+<section class="section" id="products">
+  <div class="product-title"><h2>Our Products</h2><p>Fresh Ingredients&nbsp; • &nbsp;Premium Taste&nbsp; • &nbsp;Made with Love</p></div>
+  <div class="product-search-wrap"><input id="productSearch" type="search" placeholder="Search products..." aria-label="Search products"></div>
+  <div class="filters" id="filters"><button class="filter active" data-filter="all">All Products</button><button class="filter" data-filter="brownie">Brownies</button><button class="filter" data-filter="dessert">Desserts & Cookies</button><button class="filter" data-filter="gift">Custom Gifts</button></div>
+  <div class="products" id="productGrid"></div>
+  <div class="order-note"><strong>Custom gift orders:</strong> Customized chocolate return gifts and customized water bottles are ₹20 per piece, with a minimum order of 100 pieces. Please message us to discuss customization and availability.</div>
+</section>
+<section class="section" id="about"><div class="section-head"><div><div class="eyebrow">Our story</div><h2>Made with love in Vellore</h2></div><p>Small Bites... Big Happiness...</p></div><div class="about-card"><p>APS Creative Studio makes delicious brownies, desserts and personalized gifts for your special moments.</p></div></section>
+<section class="section" id="custom-gifts"><div class="section-head"><div><div class="eyebrow">Made personal</div><h2>Gifts with your touch</h2></div></div><div class="about"><div class="about-card"><h3>Customized Chocolate Return Gifts</h3><p>Personalized chocolate gifts for birthdays, celebrations and special occasions. ₹20 per piece · Minimum 100 pieces.</p><div class="contact-row"><button class="btn primary" onclick="askCustom('Customized Chocolate Return Gift')">Enquire on WhatsApp</button></div></div><div class="about-card"><h3>Customized Water Bottles</h3><p>Customized bottles for events and return gifts. ₹20 per piece · Minimum 100 pieces.</p><div class="contact-row"><button class="btn primary" onclick="askCustom('Customized Water Bottle')">Enquire on WhatsApp</button></div></div></div></section>
+<section class="section" id="feedback"><div class="section-head"><div><div class="eyebrow">Your words matter</div><h2>Share Your Feedback</h2></div><p>Help our small business grow ♡</p></div><div class="feedback-grid"><div class="about-card"><div class="stars">★★★★★</div><h3>Enjoyed your order?</h3><p>Tell us how we did! Your feedback helps APS Creative Studio improve our brownies, desserts and service.</p><p class="feedback-hint" style="margin-top:14px">Want to share a photo of your order? After WhatsApp opens, attach your photo in the chat before sending.</p></div><form class="about-card feedback-form" id="feedbackForm"><label>Your name (optional)<input id="feedbackName" type="text" maxlength="60" placeholder="Enter your name"></label><label>Rating<select id="feedbackRating" required><option value="5">★★★★★ — Loved it</option><option value="4">★★★★☆ — Very good</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Could be better</option><option value="1">★☆☆☆☆ — Needs improvement</option></select></label><label>Your feedback<textarea id="feedbackMessage" required maxlength="1000" placeholder="Tell us about your experience..."></textarea></label><button class="btn primary" type="submit" id="submitFeedback">Submit Feedback</button><p class="feedback-hint" id="feedbackStatus">Your review will be checked by APS Creative Studio before it appears publicly. We do not ask for your phone number.</p></form></div></section>
+<section class="section" id="customer-reviews"><div class="section-head"><div><div class="eyebrow">Kind words from customers</div><h2>Customer Reviews</h2></div><p>Only approved reviews appear here ♡</p></div><div id="approvedReviews" class="products"><p class="feedback-hint">Loading customer reviews…</p></div></section>
+<section class="section" id="contact"><div class="about"><div class="about-card"><div class="eyebrow">Say hello</div><h3>Let’s make it special.</h3><p>Have a question or want to place a custom order? Contact APS Creative Studio on WhatsApp.</p><div class="contact-row"><a class="btn primary" href="https://wa.me/916379139837" target="_blank" rel="noopener">Chat on WhatsApp</a></div></div><div class="about-card"><div class="eyebrow">Find us</div><h3>APS Creative Studio</h3><p>Vellore, Tamil Nadu<br>Brownies · Desserts · Customized Gifts</p><p style="margin-top:12px">Prices are listed per item unless a minimum quantity is mentioned. Please confirm availability and delivery charges when ordering.</p></div></div></section>
+</main>
+<footer class="footer"><strong>APS Creative Studio</strong><p>Thank you for supporting our small business ♡</p><p><a href="https://www.instagram.com/customized._.productz/" target="_blank" rel="noopener">Instagram ↗</a> · <a href="https://wa.me/916379139837" target="_blank" rel="noopener">Order on WhatsApp</a></p>© <span id="year"></span> · Made with love in Vellore</footer>
+<a class="floating-wa" href="https://wa.me/916379139837" target="_blank" rel="noopener">☏ WhatsApp</a>
+<div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Shopping cart"><div class="cart-panel"><div class="cart-head"><h2>Your Cart</h2><button class="close" id="closeCart" type="button">Close ✕</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div><button class="checkout" id="checkout" type="button">Order on WhatsApp</button><p style="font-size:11px;color:var(--muted)">Delivery charges, availability and custom-order details will be confirmed on WhatsApp.</p></div></div>
+<script>
+const products = [
+ {id:1,name:'Classic Fudge Brownie',price:39,category:'brownie',image:'classic-fudge-brownie.jpg',emoji:'🍫',desc:'Rich, chewy and deeply chocolaty.'},
+ {id:2,name:'Choco Chips Brownie',price:49,category:'brownie',image:'choco-chips-brownie.jpg',emoji:'🍪',desc:'Fudgy brownie with chocolate chips.'},
+ {id:3,name:'Dark Chocolate Brownie',price:59,category:'brownie',image:'dark-chocolate-brownie.jpg',emoji:'🍫',desc:'Bold dark chocolate flavour.'},
+ {id:4,name:'White Chocolate Brownie',price:69,category:'brownie',image:'white-chocolate-brownie.jpg',emoji:'🤍',desc:'Brownie topped with white chocolate.'},
+ {id:5,name:'Milk Chocolate Brownie',price:59,category:'brownie',image:'milk-chocolate-brownie.jpg',emoji:'🍫',desc:'Smooth milk chocolate taste.'},
+ {id:6,name:'Triple Chocolate Brownie',price:89,category:'brownie',image:'triple-chocolate-brownie.jpg',emoji:'🍫',desc:'A rich treat for triple-chocolate lovers.'},
+ {id:7,name:'Nuts Chocolate Brownie',price:69,category:'brownie',image:'nuts-chocolate-brownie.jpg',emoji:'🥜',desc:'Chocolate brownie with crunchy nuts.'},
+ {id:8,name:'KitKat Chocolate Brownie',price:69,category:'brownie',image:'kitkat-brownie.jpg',emoji:'🍫',desc:'Brownie with a crunchy chocolate twist.'},
+ {id:9,name:'Biscoff Chocolate Brownie',price:69,category:'brownie',image:'biscoff-brownie.jpg',emoji:'🍪',desc:'Chocolate brownie with Biscoff flavour.'},
+ {id:10,name:'Nutella Brownie',price:79,category:'brownie',image:'nutella-brownie.jpg',emoji:'🤎',desc:'Fudgy brownie with Nutella flavour.'},
+ {id:11,name:'Mini Cookies with Choco Chips',price:99,category:'dessert',image:'mini-cookies.jpg',emoji:'🍪',desc:'Mini cookies packed with chocolate chips.'},
+ {id:12,name:'Rose Milk Tres Leches',price:99,category:'dessert',image:'rose-milk-tres-leches.jpg',emoji:'🍰',desc:'A creamy rose-milk dessert.'},
+ {id:13,name:'Customized Chocolate Return Gift',price:20,category:'gift',image:'chocolate-return-gift.jpg',emoji:'🎁',desc:'Personalized return gifts · Minimum 100 pieces.',min:100},
+ {id:14,name:'Customized Water Bottle',price:20,category:'gift',image:'custom-water-bottle.jpg',emoji:'🧴',desc:'Customized bottles · Minimum 100 pieces.',min:100}
+];
+const cart = {};
+let activeFilter='all';
+const searchBox=document.getElementById('productSearch');
+const searchToggle=document.getElementById('toggleSearch');
+searchToggle.addEventListener('click',()=>{const open=!searchBox.classList.contains('visible');searchBox.classList.toggle('visible',open);searchToggle.setAttribute('aria-expanded',String(open));document.getElementById('products').scrollIntoView({behavior:'smooth',block:'start'});if(open){setTimeout(()=>searchBox.focus(),250)}else{searchBox.value='';renderProducts(activeFilter,'')}});
+searchBox.addEventListener('input',()=>renderProducts(activeFilter,searchBox.value.trim().toLowerCase()));
+const grid = document.getElementById('productGrid');
+function renderProducts(filter='all',query=''){
+ activeFilter=filter;grid.innerHTML='';
+ products.filter(p=>(filter==='all'||p.category===filter)&&(!query||(p.name+' '+p.desc).toLowerCase().includes(query))).forEach(p=>{
+  const card=document.createElement('article');card.className='product';
+  card.innerHTML=`<div class="product-visual"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="emoji-fallback" style="display:none" aria-hidden="true">${p.emoji}</span></div><div class="product-content"><div class="category">${p.category==='brownie'?'Brownie':p.category==='dessert'?'Dessert & Cookies':'Custom Gift'}</div><h3>${p.name}</h3><p class="desc">${p.desc}</p><div class="product-bottom"><div class="price">₹${p.price}${p.min?'<small class="minimum"> / pc<br>Min. 100 pcs</small>':''}</div><button class="add" type="button" data-add="${p.id}">🛒 Add to Cart</button></div></div>`;
+  grid.appendChild(card);
+ });
+ if(!grid.children.length){grid.innerHTML='<p class="empty-search" style="grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted)">No products found. Try another search.</p>'}
+}
+function updateCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById('cartCount').textContent=count;
+ const box=document.getElementById('cartItems');box.innerHTML='';let total=0;
+ products.filter(p=>cart[p.id]).forEach(p=>{const qty=cart[p.id];total+=qty*p.price;const row=document.createElement('div');row.className='cart-item';row.innerHTML=`<div><strong>${p.name}</strong><small>₹${p.price} each${p.min?' · Min. '+p.min+' pieces':''}</small><div class="qty"><button type="button" data-qty="${p.id}" data-delta="-1" aria-label="Remove one">−</button><span>${qty}</span><button type="button" data-qty="${p.id}" data-delta="1" aria-label="Add one">+</button></div></div><strong>₹${qty*p.price}</strong>`;box.appendChild(row)});
+ if(!count)box.innerHTML='<p class="empty">Your cart is empty. Add something delicious from the menu!</p>';
+ document.getElementById('cartTotal').textContent='₹'+total;
+}
+grid.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(!b)return;const id=Number(b.dataset.add);cart[id]=(cart[id]||0)+1;updateCart();b.textContent='Added ✓';setTimeout(()=>{b.textContent='Add +'},700)});
+document.getElementById('cartItems').addEventListener('click',e=>{const b=e.target.closest('[data-qty]');if(!b)return;const id=Number(b.dataset.qty);cart[id]=(cart[id]||0)+Number(b.dataset.delta);if(cart[id]<=0)delete cart[id];updateCart()});
+// Reliable product category filters: each button gets its own click handler.
+document.querySelectorAll('#filters .filter[data-filter]').forEach(button=>{
+ button.addEventListener('click',()=>{
+  const selectedFilter=button.getAttribute('data-filter') || 'all';
+  document.querySelectorAll('#filters .filter').forEach(item=>item.classList.toggle('active',item===button));
+  renderProducts(selectedFilter);
+ });
+});
+const overlay=document.getElementById('cartOverlay');document.getElementById('openCart').addEventListener('click',()=>overlay.classList.add('open'));document.getElementById('closeCart').addEventListener('click',()=>overlay.classList.remove('open'));overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.classList.remove('open')});
+document.getElementById('checkout').addEventListener('click',()=>{const selected=products.filter(p=>cart[p.id]);if(!selected.length){alert('Macha, first cart-la product add pannunga!');return}let lines=['Hi APS Creative Studio! I would like to place an order:',''];let total=0;selected.forEach(p=>{const q=cart[p.id];total+=q*p.price;lines.push(`${p.name} x ${q} = ₹${q*p.price}${p.min?' (Minimum order '+p.min+' pieces applies)':''}`)});lines.push('',`Subtotal: ₹${total}`,'Please confirm availability, delivery charges and order details.');window.open('https://wa.me/916379139837?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener')});
+function askCustom(name){const p=products.find(x=>x.name===name);const msg=`Hi APS Creative Studio! I am interested in ${name}. Price shown: ₹${p.price} per piece; minimum order ${p.min} pieces. Please share customization options and availability.`;window.open('https://wa.me/916379139837?text='+encodeURIComponent(msg),'_blank','noopener')}
+document.getElementById('year').textContent=new Date().getFullYear();renderProducts();updateCart();
 
-  <!-- Navigation -->
-  <header>
-    <div class="container nav-container">
-      <a href="#" class="logo">
-        <i class="fa-solid fa-gem"></i> APS CREATIVE STUDIO
-      </a>
-      <div class="nav-links">
-        <a href="#products">Catalog</a>
-        <a href="#feedback">Reviews</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Customized Elegance & Keepsakes</h1>
-      <p>Luxury handcrafted return gifts, customized chocolates, and personalized event merchandise tailored for celebrations.</p>
-      <a href="#products" class="btn-gold"><i class="fa-solid fa-gift"></i> Explore Creations</a>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section class="container" id="products">
-    <div class="section-title">
-      <h2>Handcrafted Collection</h2>
-      <p>Select your favorite piece and customize it directly via WhatsApp</p>
-    </div>
-
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <div>
-          <div class="product-img"><i class="fa-solid fa-cookie-bite"></i></div>
-          <h3 class="product-title">Personalized Chocolate Box</h3>
-          <p class="product-desc">Artisanal celebration chocolates wrapped with bespoke couple portraits or celebration themes.</p>
-        </div>
-        <div class="product-footer">
-          <span class="product-price">₹350+</span>
-          <a href="https://wa.me/?text=Hello%20APS%20Creative%20Studio,%20I%20would%20like%20to%20order%20the%20Personalized%20Chocolate%20Box" target="_blank" rel="noopener noreferrer" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Order</a>
-        </div>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <div>
-          <div class="product-img"><i class="fa-regular fa-image"></i></div>
-          <h3 class="product-title">Custom Acrylic Photo Magnet</h3>
-          <p class="product-desc">Gloss laminated high-definition fridge magnets customized with your family memories and dates.</p>
-        </div>
-        <div class="product-footer">
-          <span class="product-price">₹199+</span>
-          <a href="https://wa.me/?text=Hello%20APS%20Creative%20Studio,%20I%20would%20like%20to%20order%20Custom%20Acrylic%20Photo%20Magnets" target="_blank" rel="noopener noreferrer" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Order</a>
-        </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product-card">
-        <div>
-          <div class="product-img"><i class="fa-solid fa-ribbon"></i></div>
-          <h3 class="product-title">Luxury Return Gift Hampers</h3>
-          <p class="product-desc">Curated celebration favors featuring custom stencils, engraved tokens, and luxury gift bags.</p>
-        </div>
-        <div class="product-footer">
-          <span class="product-price">₹499+</span>
-          <a href="https://wa.me/?text=Hello%20APS%20Creative%20Studio,%20I%20would%20like%20to%20inquire%20about%20Luxury%20Return%20Gift%20Hampers" target="_blank" rel="noopener noreferrer" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Order</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feedback & Reviews Section -->
-  <section class="feedback-section" id="feedback">
-    <div class="container">
-      <div class="section-title">
-        <h2>Client Testimonials</h2>
-        <p>Read what our patrons say, or leave your own review</p>
-      </div>
-
-      <div class="feedback-layout">
-        <!-- Review Submission Form -->
-        <div class="feedback-form-box">
-          <h3>Leave Your Experience</h3>
-          <form id="feedbackForm">
-            <div class="form-group">
-              <label for="customerName">Your Name <span style="color: #777;">(Optional)</span></label>
-              <input type="text" id="customerName" class="form-control" placeholder="e.g. Anand Kumar" />
-            </div>
-
-            <div class="form-group">
-              <label>Your Rating</label>
-              <div class="star-rating-selector">
-                <input type="radio" id="star5" name="rating" value="5" required />
-                <label for="star5" title="5 stars"><i class="fa-solid fa-star"></i></label>
-                <input type="radio" id="star4" name="rating" value="4" />
-                <label for="star4" title="4 stars"><i class="fa-solid fa-star"></i></label>
-                <input type="radio" id="star3" name="rating" value="3" />
-                <label for="star3" title="3 stars"><i class="fa-solid fa-star"></i></label>
-                <input type="radio" id="star2" name="rating" value="2" />
-                <label for="star2" title="2 stars"><i class="fa-solid fa-star"></i></label>
-                <input type="radio" id="star1" name="rating" value="1" />
-                <label for="star1" title="1 star"><i class="fa-solid fa-star"></i></label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="feedbackText">Your Thoughts & Feedback</label>
-              <textarea id="feedbackText" class="form-control" rows="4" placeholder="How did you like our products and packaging?" required></textarea>
-              <p class="form-notice"><i class="fa-solid fa-shield-halved"></i> All reviews are moderated to protect customer privacy before appearing publicly.</p>
-            </div>
-
-            <button type="submit" id="submitFeedbackBtn" class="btn-gold" style="width: 100%; justify-content: center;">
-              <i class="fa-regular fa-paper-plane"></i> Submit Feedback
-            </button>
-            <div id="form-status"></div>
-          </form>
-        </div>
-
-        <!-- Approved Reviews Display List -->
-        <div>
-          <h3 class="reviews-list-header">Patron Experiences</h3>
-          <p style="color: #888; font-size: 0.85rem; margin-bottom: 20px;">Verified feedback from our valued customers.</p>
-          <div class="reviews-scroll" id="reviewsContainer">
-            <div class="no-reviews-msg">
-              <i class="fa-solid fa-spinner fa-spin"></i> Loading verified reviews...
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="social-links">
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-      <p>&copy; 2026 APS Creative Studio. All rights reserved. Handcrafted with precision.</p>
-    </div>
-  </footer>
-
-  <!-- Supabase Integration Logic -->
-  <script>
-    // Configured with your Supabase credentials
-    const SUPABASE_URL = "https://tplgbtvzxxgxadcibkus.supabase.co";
-    const SUPABASE_ANON_KEY = "Sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx";
-
-    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    // Escape special HTML characters to prevent XSS
-    function escapeHtml(str) {
-      if (!str) return "";
-      return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    // Render 1-5 Star Icons
-    function renderStars(ratingCount) {
-      let starsHtml = "";
-      const count = Math.max(1, Math.min(5, parseInt(ratingCount, 10) || 5));
-      for (let i = 1; i <= 5; i++) {
-        if (i <= count) {
-          starsHtml += '<i class="fa-solid fa-star"></i>';
-        } else {
-          starsHtml += '<i class="fa-regular fa-star"></i>';
-        }
-      }
-      return starsHtml;
-    }
-
-    // Fetch and display only reviews marked as 'approved'
-    async function loadApprovedReviews() {
-      const container = document.getElementById("reviewsContainer");
-
-      try {
-        const { data, error } = await supabaseClient
-          .from("customer_reviews")
-          .select("id, customer_name, rating, feedback, created_at, status")
-          .eq("status", "approved")
-          .order("created_at", { ascending: false });
-
-        if (error) throw error;
-
-        if (!data || data.length === 0) {
-          container.innerHTML = `
-            <div class="no-reviews-msg">
-              <i class="fa-regular fa-comments" style="font-size: 1.5rem; margin-bottom: 10px; color: var(--gold-primary);"></i><br/>
-              No reviews published yet. Be the first to share your experience!
-            </div>`;
-          return;
-        }
-
-        container.innerHTML = data.map(item => {
-          const dateStr = item.created_at ? new Date(item.created_at).toLocaleDateString() : "";
-          const displayName = item.customer_name && item.customer_name.trim() !== "" 
-            ? escapeHtml(item.customer_name) 
-            : "Valued Customer";
-
-          return `
-            <div class="review-item">
-              <div class="review-item-header">
-                <span class="reviewer-name">${displayName}</span>
-                <span class="review-stars">${renderStars(item.rating)}</span>
-              </div>
-              <div class="review-text">${escapeHtml(item.feedback)}</div>
-              ${dateStr ? `<div class="review-date">${dateStr}</div>` : ""}
-            </div>
-          `;
-        }).join("");
-
-      } catch (err) {
-        console.error("Error loading reviews:", err);
-        container.innerHTML = `
-          <div class="no-reviews-msg" style="color: #ff9999;">
-            Unable to fetch reviews at this moment. Please check table permissions or try again later.
-          </div>`;
-      }
-    }
-
-    // Handle feedback submission
-    const feedbackForm = document.getElementById("feedbackForm");
-    const formStatus = document.getElementById("form-status");
-    const submitBtn = document.getElementById("submitFeedbackBtn");
-
-    feedbackForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const nameVal = document.getElementById("customerName").value.trim();
-      const ratingChecked = document.querySelector('input[name="rating"]:checked');
-      const feedbackVal = document.getElementById("feedbackText").value.trim();
-
-      if (!ratingChecked) {
-        formStatus.className = "error";
-        formStatus.textContent = "Please select a star rating.";
-        return;
-      }
-
-      if (!feedbackVal) {
-        formStatus.className = "error";
-        formStatus.textContent = "Please write your review feedback.";
-        return;
-      }
-
-      const rating = parseInt(ratingChecked.value, 10);
-
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
-      formStatus.style.display = "none";
-
-      try {
-        // Enforcing 'pending' status so new submissions are not visible publicly
-        const { error } = await supabaseClient
-          .from("customer_reviews")
-          .insert([
-            {
-              customer_name: nameVal || "Valued Customer",
-              rating: rating,
-              feedback: feedbackVal,
-              status: "pending"
-            }
-          ]);
-
-        if (error) throw error;
-
-        formStatus.className = "success";
-        formStatus.textContent = "Thank you! Your review has been submitted and will appear once approved by our studio.";
-        feedbackForm.reset();
-
-      } catch (err) {
-        console.error("Error submitting feedback:", err);
-        formStatus.className = "error";
-        formStatus.textContent = "Failed to submit feedback. Please ensure table insert permissions (RLS) are active.";
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fa-regular fa-paper-plane"></i> Submit Feedback';
-      }
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      loadApprovedReviews();
-    });
-  </script>
+// Supabase public connection settings: replace these two placeholders before publishing.
+const SUPABASE_URL = 'https://tplgbtvzxgxgxadcbikus.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'PASTE_YOUR_SB_PUBLISHABLE_KEY_HERE';
+const reviewsRoot = document.getElementById('approvedReviews');
+function supabaseReady(){return SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('PASTE_') && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');}
+async function loadApprovedReviews(){
+  if(!supabaseReady()){reviewsRoot.innerHTML='<p class="feedback-hint">Customer reviews will appear here after the website connection is configured.</p>';return;}
+  try{
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/customer_reviews?select=customer_name,rating,feedback,created_at&status=eq.approved&order=created_at.desc&limit=30`,{headers:{apikey:SUPABASE_PUBLISHABLE_KEY,Authorization:`Bearer ${SUPABASE_PUBLISHABLE_KEY}`}});
+    if(!r.ok) throw new Error('Could not load reviews');
+    const rows=await r.json();
+    reviewsRoot.innerHTML=rows.length?rows.map(x=>`<article class="product"><div class="productbody"><div class="stars" aria-label="${Number(x.rating)} out of 5 stars">${'★'.repeat(Number(x.rating))}${'☆'.repeat(5-Number(x.rating))}</div><h3>${escapeReviewText(x.customer_name||'Customer')}</h3><p>${escapeReviewText(x.feedback)}</p></div></article>`).join(''):'<p class="feedback-hint">No public reviews yet. Be the first to share your experience!</p>';
+  }catch(err){reviewsRoot.innerHTML='<p class="feedback-hint">Reviews are temporarily unavailable. Please check back soon.</p>';}
+}
+function escapeReviewText(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+document.getElementById('feedbackForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const status=document.getElementById('feedbackStatus'),button=document.getElementById('submitFeedback');
+  const name=document.getElementById('feedbackName').value.trim();
+  const rating=Number(document.getElementById('feedbackRating').value);
+  const message=document.getElementById('feedbackMessage').value.trim();
+  if(message.length<5){status.textContent='Please write at least 5 characters of feedback.';return;}
+  if(!supabaseReady()){status.textContent='Website connection is not configured yet. Please contact APS Creative Studio on WhatsApp.';return;}
+  button.disabled=true;button.textContent='Submitting…';status.textContent='Submitting your review securely…';
+  try{
+    const payload={customer_name:name||'Customer',rating,feedback:message,status:'pending'};
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/customer_reviews`,{method:'POST',headers:{apikey:SUPABASE_PUBLISHABLE_KEY,Authorization:`Bearer ${SUPABASE_PUBLISHABLE_KEY}`,'Content-Type':'application/json',Prefer:'return=minimal'},body:JSON.stringify(payload)});
+    if(!r.ok){const detail=await r.text();throw new Error(detail||'Submission failed');}
+    this.reset();document.getElementById('feedbackRating').value='5';
+    status.textContent='Thank you! Your feedback was received and is waiting for approval. It will appear publicly only after APS Creative Studio approves it.';
+  }catch(err){status.textContent='Sorry, feedback could not be submitted. Please try again later.';}
+  finally{button.disabled=false;button.textContent='Submit Feedback';}
+});
+loadApprovedReviews();
+</script>
 </body>
 </html>
+
