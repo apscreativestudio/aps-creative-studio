@@ -130,7 +130,7 @@ document.getElementById('year').textContent=new Date().getFullYear();renderProdu
 const SUPABASE_URL = 'https://tplgbtvzxxgxadcbikus.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'Sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx';
 const reviewsRoot = document.getElementById('approvedReviews');
-function supabaseReady(){return SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('PASTE_') && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');}
+function supabaseReady(){return SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('PASTE_') && SUPABASE_PUBLISHABLE_KEY.startsWith('Sb_publishable_');}
 async function loadApprovedReviews(){
   if(!supabaseReady()){reviewsRoot.innerHTML='<p class="feedback-hint">Customer reviews will appear here after the website connection is configured.</p>';return;}
   try{
