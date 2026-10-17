@@ -92,18 +92,20 @@
 .checkout{width:100%;margin-top:18px;background:var(--green);color:#06210e;border:0;border-radius:8px;padding:13px;font-weight:800}
 .empty{color:var(--muted);font-size:14px}
 
-/* ================= INTRO ANIMATED SPLASH ================= */
+/* ================= INTRO ANIMATED SPLASH (PERFECT FIT) ================= */
 #splashOverlay {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: #000000;
+  background: #090604;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: opacity 0.8s ease, visibility 0.8s ease;
   overflow: hidden;
   cursor: pointer;
+  padding: 16px;
 }
 #splashOverlay.hide {
   opacity: 0;
@@ -111,20 +113,22 @@
   pointer-events: none;
 }
 #splashOverlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 95%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 14px;
 }
 .splash-enter-btn {
-  position: absolute;
-  bottom: 26px;
-  background: rgba(16, 12, 10, 0.8);
+  margin-top: 22px;
+  background: rgba(22, 17, 13, 0.9);
   border: 1px solid var(--gold);
   color: #fff;
-  padding: 8px 18px;
+  padding: 9px 22px;
   border-radius: 999px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   backdrop-filter: blur(5px);
   pointer-events: auto;
@@ -147,7 +151,7 @@
 </head>
 <body>
 
-<!-- Intro Animated Splash Screen (GIF) -->
+<!-- Intro Animated Splash Screen (Perfect Screen Fit) -->
 <div id="splashOverlay">
   <img src="aps-intro.gif" alt="APS Brownies Intro Animation">
   <button id="skipSplash" class="splash-enter-btn" type="button">Enter Studio →</button>
@@ -234,13 +238,12 @@
   if (skip) skip.addEventListener('click', removeSplash);
   if (splash) splash.addEventListener('click', removeSplash);
 
-  // 3.5 seconds-la continuous melting GIF play aana apram auto-reveal
   window.addEventListener('load', () => {
     setTimeout(removeSplash, 3500);
   });
 })();
 
-// ================= PRODUCT DATA (14 ITEMS UPDATED) =================
+// ================= PRODUCT DATA =================
 const products = [
  {id:1,name:'Classic Fudge Brownie',price:39,category:'brownie',image:'classic-fudge-brownie.jpg',emoji:'🍫',desc:'Rich, chewy and deeply chocolaty.'},
  {id:2,name:'Choco Chips Brownie',price:49,category:'brownie',image:'choco-chips-brownie.jpg',emoji:'🍪',desc:'Fudgy brownie with chocolate chips.'},
