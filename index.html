@@ -33,12 +33,32 @@
 .product-search-wrap input.visible{display:block;animation:searchReveal .2s ease-out}
 .product-search-wrap input::placeholder{color:#b9a995}
 @keyframes searchReveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+
+/* APS chocolate & brownie opening intro */
+#apsIntro{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at center,#351b0e 0%,#120a06 48%,#050403 100%);opacity:1;visibility:visible;transition:opacity .65s ease,visibility .65s ease}
+#apsIntro.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.aps-intro-glow{position:absolute;width:min(80vw,440px);aspect-ratio:1;border:1px solid #d9ad6645;border-radius:50%;box-shadow:0 0 75px #9b4c1730,inset 0 0 60px #9b4c1725;animation:apsGlow 2s ease-in-out infinite alternate}
+.aps-choc-ribbon{position:absolute;top:-30%;width:30px;height:160%;background:linear-gradient(90deg,#1a0803,#5a260f,#b66a2a,#421707);filter:blur(2px);opacity:.65;transform:rotate(35deg);animation:apsFlow 2.8s ease-in-out infinite alternate}
+.aps-choc-ribbon.ribbon-two{width:18px;left:18%;transform:rotate(-35deg);animation-delay:-1s}
+.aps-intro-content{position:relative;text-align:center;padding:24px;animation:apsReveal .9s ease-out both}
+.aps-intro-mark{font-family:Georgia,serif;font-weight:bold;font-size:clamp(76px,18vw,130px);line-height:.9;letter-spacing:-5px;color:#e2b96f;text-shadow:0 2px 1px #fff2c2,0 8px 25px #000,0 0 32px #b96a2c70}
+.aps-intro-name{margin-top:16px;font-family:Georgia,serif;font-size:clamp(16px,4vw,24px);letter-spacing:3px;color:#fff1d5}
+.aps-intro-tag{margin-top:10px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#d9ad66}
+.aps-intro-brownie{margin-top:17px;font-size:clamp(22px,5vw,32px);filter:drop-shadow(0 5px 8px #000)}
+@keyframes apsReveal{from{opacity:0;transform:translateY(15px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes apsGlow{from{transform:scale(.94);opacity:.45}to{transform:scale(1.04);opacity:.9}}
+@keyframes apsFlow{from{margin-left:-8%;opacity:.25}to{margin-left:8%;opacity:.8}}
+@media(prefers-reduced-motion:reduce){#apsIntro,.aps-intro-content,.aps-intro-glow,.aps-choc-ribbon{animation:none!important;transition:none!important}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
 .feedback-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.feedback-form{display:grid;gap:12px}.feedback-form label{font-size:12px;color:var(--gold);display:grid;gap:6px}.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;background:#100c09;color:var(--cream);border:1px solid #5b452c;border-radius:8px;padding:12px;font:inherit}.feedback-form textarea{min-height:110px;resize:vertical}.feedback-hint{font-size:12px;color:var(--muted)}.stars{color:#e9b64d;font-size:22px;letter-spacing:3px}@media(max-width:650px){.feedback-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div id="apsIntro" role="status" aria-label="APS Creative Studio is loading">
+  <div class="aps-intro-glow"></div><div class="aps-choc-ribbon"></div><div class="aps-choc-ribbon ribbon-two"></div>
+  <div class="aps-intro-content"><div class="aps-intro-mark">APS</div><div class="aps-intro-name">CREATIVE STUDIO</div><div class="aps-intro-tag">Brownies · Chocolate · Customized Gifts</div><div class="aps-intro-brownie" aria-hidden="true">🍫 &nbsp; 🍰 &nbsp; 🍫</div></div>
+</div>
 <div class="topbar">HANDCRAFTED TREATS & CUSTOM GIFTS · VELLORE</div>
 <header class="header">
   <a class="brand" href="#home" aria-label="APS Creative Studio home">
@@ -74,13 +94,13 @@
 const products = [
  {id:1,name:'Classic Fudge Brownie',price:39,category:'brownie',image:'classic-fudge-brownie.jpg',emoji:'🍫',desc:'Rich, chewy and deeply chocolaty.'},
  {id:2,name:'Choco Chips Brownie',price:49,category:'brownie',image:'choco-chips-brownie.jpg',emoji:'🍪',desc:'Fudgy brownie with chocolate chips.'},
- {id:3,name:'Dark Chocolate Brownie',price:59,category:'brownie',image:'dark-chocolate-brownie.jpg',emoji:'🍫',desc:'Bold dark chocolate flavour.'},
+ {id:3,name:'Dark Chocolate Brownie',price:69,category:'brownie',image:'dark-chocolate-brownie.jpg',emoji:'🍫',desc:'Bold dark chocolate flavour.'},
  {id:4,name:'White Chocolate Brownie',price:69,category:'brownie',image:'white-chocolate-brownie.jpg',emoji:'🤍',desc:'Brownie topped with white chocolate.'},
- {id:5,name:'Milk Chocolate Brownie',price:59,category:'brownie',image:'milk-chocolate-brownie.jpg',emoji:'🍫',desc:'Smooth milk chocolate taste.'},
+ {id:5,name:'Milk Chocolate Brownie',price:69,category:'brownie',image:'milk-chocolate-brownie.jpg',emoji:'🍫',desc:'Smooth milk chocolate taste.'},
  {id:6,name:'Triple Chocolate Brownie',price:89,category:'brownie',image:'triple-chocolate-brownie.jpg',emoji:'🍫',desc:'A rich treat for triple-chocolate lovers.'},
- {id:7,name:'Nuts Chocolate Brownie',price:69,category:'brownie',image:'nuts-chocolate-brownie.jpg',emoji:'🥜',desc:'Chocolate brownie with crunchy nuts.'},
- {id:8,name:'KitKat Chocolate Brownie',price:69,category:'brownie',image:'kitkat-brownie.jpg',emoji:'🍫',desc:'Brownie with a crunchy chocolate twist.'},
- {id:9,name:'Biscoff Chocolate Brownie',price:69,category:'brownie',image:'biscoff-brownie.jpg',emoji:'🍪',desc:'Chocolate brownie with Biscoff flavour.'},
+ {id:7,name:'Nuts Chocolate Brownie',price:79,category:'brownie',image:'nuts-chocolate-brownie.jpg',emoji:'🥜',desc:'Chocolate brownie with crunchy nuts.'},
+ {id:8,name:'KitKat Chocolate Brownie',price:79,category:'brownie',image:'kitkat-brownie.jpg',emoji:'🍫',desc:'Brownie with a crunchy chocolate twist.'},
+ {id:9,name:'Biscoff Chocolate Brownie',price:79,category:'brownie',image:'biscoff-brownie.jpg',emoji:'🍪',desc:'Chocolate brownie with Biscoff flavour.'},
  {id:10,name:'Nutella Brownie',price:79,category:'brownie',image:'nutella-brownie.jpg',emoji:'🤎',desc:'Fudgy brownie with Nutella flavour.'},
  {id:11,name:'Mini Cookies with Choco Chips',price:99,category:'dessert',image:'mini-cookies.jpg',emoji:'🍪',desc:'Mini cookies packed with chocolate chips.'},
  {id:12,name:'Rose Milk Tres Leches',price:99,category:'dessert',image:'rose-milk-tres-leches.jpg',emoji:'🍰',desc:'A creamy rose-milk dessert.'},
@@ -123,6 +143,8 @@ const overlay=document.getElementById('cartOverlay');document.getElementById('op
 document.getElementById('checkout').addEventListener('click',()=>{const selected=products.filter(p=>cart[p.id]);if(!selected.length){alert('Macha, first cart-la product add pannunga!');return}let lines=['Hi APS Creative Studio! I would like to place an order:',''];let total=0;selected.forEach(p=>{const q=cart[p.id];total+=q*p.price;lines.push(`${p.name} x ${q} = ₹${q*p.price}${p.min?' (Minimum order '+p.min+' pieces applies)':''}`)});lines.push('',`Subtotal: ₹${total}`,'Please confirm availability, delivery charges and order details.');window.open('https://wa.me/916379139837?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener')});
 function askCustom(name){const p=products.find(x=>x.name===name);const msg=`Hi APS Creative Studio! I am interested in ${name}. Price shown: ₹${p.price} per piece; minimum order ${p.min} pieces. Please share customization options and availability.`;window.open('https://wa.me/916379139837?text='+encodeURIComponent(msg),'_blank','noopener')}
 document.getElementById('year').textContent=new Date().getFullYear();
+// Keep the intro brief; website content remains available underneath.
+window.setTimeout(()=>{const intro=document.getElementById('apsIntro');if(intro)intro.classList.add('is-hidden');},2300);
 renderProducts();
 updateCart();
 
