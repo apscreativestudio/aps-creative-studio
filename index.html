@@ -128,20 +128,19 @@ document.getElementById('year').textContent=new Date().getFullYear();renderProdu
 // Supabase public connection settings
 const SUPABASE_URL = 'https://tplgbtvzxxgxadcibkus.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'Sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx';
-const SUPABASE_URL = 'https://tplgbtvzxxgxadcibkus.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = 'Sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx';
 const reviewsRoot = document.getElementById('approvedReviews');
+
 function supabaseReady(){
   return SUPABASE_URL.startsWith('https://') &&
          !SUPABASE_URL.includes('PASTE_') &&
          SUPABASE_PUBLISHABLE_KEY.toLowerCase().startsWith('sb_publishable_');
 }
 
-         !SUPABASE_URL.includes('PASTE_') &&
-         SUPABASE_PUBLISHABLE_KEY.toLowerCase().startsWith('sb_publishable_');
-}
 async function loadApprovedReviews(){
-  if(!supabaseReady()){reviewsRoot.innerHTML='<p class="feedback-hint">Customer reviews will appear here after the website connection is configured.</p>';return;}
+  if(!supabaseReady()){
+    reviewsRoot.innerHTML='<p class="feedback-hint">Customer reviews will appear here after the website connection is configured.</p>';
+    return;
+  }
   try{
     const r=await fetch(`${SUPABASE_URL}/rest/v1/customer_reviews?select=customer_name,rating,feedback,created_at&status=eq.approved&order=created_at.desc&limit=30`,{
       headers:{
@@ -152,9 +151,15 @@ async function loadApprovedReviews(){
     if(!r.ok) throw new Error('Could not load reviews');
     const rows=await r.json();
     reviewsRoot.innerHTML=rows.length?rows.map(x=>`<article class="product"><div class="product-content"><div class="stars" aria-label="${Number(x.rating)} out of 5 stars">${'★'.repeat(Number(x.rating))}${'☆'.repeat(5-Number(x.rating))}</div><h3 style="min-height:auto;margin:6px 0;">${escapeReviewText(x.customer_name||'Customer')}</h3><p class="desc" style="display:block;color:var(--muted);">${escapeReviewText(x.feedback)}</p></div></article>`).join(''):'<p class="feedback-hint">No public reviews yet. Be the first to share your experience!</p>';
-  }catch(err){reviewsRoot.innerHTML='<p class="feedback-hint">Reviews are temporarily unavailable. Please check back soon.</p>';}
+  }catch(err){
+    reviewsRoot.innerHTML='<p class="feedback-hint">Reviews are temporarily unavailable. Please check back soon.</p>';
+  }
 }
-function escapeReviewText(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+
+function escapeReviewText(value){
+  return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
 document.getElementById('feedbackForm').addEventListener('submit',async function(e){
   e.preventDefault();
   const status=document.getElementById('feedbackStatus'),button=document.getElementById('submitFeedback');
@@ -185,6 +190,7 @@ document.getElementById('feedbackForm').addEventListener('submit',async function
     button.disabled=false;button.textContent='Submit Feedback';
   }
 });
+
 loadApprovedReviews();
 </script>
 </body>
