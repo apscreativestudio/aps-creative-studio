@@ -185,7 +185,9 @@ document.getElementById('feedbackForm').addEventListener('submit',async function
     this.reset();document.getElementById('feedbackRating').value='5';
     status.textContent='Thank you! Your feedback was received and is waiting for approval. It will appear publicly only after APS Creative Studio approves it.';
   }catch(err){
-    status.textContent='Sorry, feedback could not be submitted. Please try again later.';
+    console.error(err);
+    status.textContent='Database Error: ' + err.message;
+  }
   }finally{
     button.disabled=false;button.textContent='Submit Feedback';
   }
