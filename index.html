@@ -128,15 +128,14 @@ updateCart();
 
 // Supabase public connection settings
 const SUPABASE_URL = 'https://tplgbtvzxxgxadcibkus.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_eJIURDsSqfwVQA8hSJb6zg_gDpYWEjx';
+const SUPABASE_PUBLISHABLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwbGdidHZ6eHhneGFkY2lia3VzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIxNTMwNTEsImV4cCI6MjEwNzcyOTA1MX0.B7yo-gQbSlySRzGAkXPyU6lGG3fR5_vlBI4EwiVVCb4';
 const reviewsRoot = document.getElementById('approvedReviews');
 
 function supabaseReady(){
   return SUPABASE_URL.startsWith('https://') &&
          !SUPABASE_URL.includes('PASTE_') &&
-         SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');
+         SUPABASE_PUBLISHABLE_KEY.length > 20;
 }
-
 async function loadApprovedReviews(){
   if(!supabaseReady()){
     reviewsRoot.innerHTML='<p class="feedback-hint">Customer reviews will appear here after the website connection is configured.</p>';
