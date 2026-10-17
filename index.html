@@ -92,7 +92,7 @@
 .checkout{width:100%;margin-top:18px;background:var(--green);color:#06210e;border:0;border-radius:8px;padding:13px;font-weight:800}
 .empty{color:var(--muted);font-size:14px}
 
-/* ================= INTRO VIDEO SPLASH SCREEN ================= */
+/* ================= INTRO ANIMATED SPLASH ================= */
 #splashOverlay {
   position: fixed;
   inset: 0;
@@ -103,13 +103,14 @@
   justify-content: center;
   transition: opacity 0.8s ease, visibility 0.8s ease;
   overflow: hidden;
+  cursor: pointer;
 }
 #splashOverlay.hide {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-#introVideo {
+#splashOverlay img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -117,17 +118,16 @@
 }
 .splash-enter-btn {
   position: absolute;
-  bottom: 30px;
+  bottom: 26px;
   background: rgba(16, 12, 10, 0.8);
   border: 1px solid var(--gold);
   color: #fff;
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  cursor: pointer;
-  z-index: 100000;
   backdrop-filter: blur(5px);
+  pointer-events: auto;
 }
 
 @media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr 1fr 45px}.nav{display:none}}
@@ -147,12 +147,9 @@
 </head>
 <body>
 
-<!-- Intro Splash Screen with Direct Video -->
+<!-- Intro Animated Splash Screen (GIF) -->
 <div id="splashOverlay">
-  <video id="introVideo" autoplay muted playsinline webkit-playsinline preload="auto">
-    <source src="aps-intro.mp4" type="video/mp4">
-    <source src="./aps-intro.mp4" type="video/mp4">
-  </video>
+  <img src="aps-intro.gif" alt="APS Brownies Intro Animation">
   <button id="skipSplash" class="splash-enter-btn" type="button">Enter Studio →</button>
 </div>
 
@@ -221,46 +218,26 @@
 
 <div class="cart-overlay" id="cartOverlay"><div class="cart-panel"><div class="cart-head"><h2>Your Cart</h2><button class="close" id="closeCart" type="button">✕</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div><button class="checkout" id="checkout" type="button">Order on WhatsApp</button></div></div>
 
+<!-- JAVASCRIPT LOGIC -->
 <script>
-// ================= INTRO VIDEO CONTROLLER =================
+// ================= INTRO ANIMATED SPLASH CONTROLLER =================
 (function() {
   const splash = document.getElementById('splashOverlay');
-  const vid = document.getElementById('introVideo');
   const skip = document.getElementById('skipSplash');
 
   function removeSplash() {
     if (!splash || splash.classList.contains('hide')) return;
     splash.classList.add('hide');
-    setTimeout(() => { 
-      splash.style.display = 'none'; 
-      if (vid) vid.pause();
-    }, 800);
+    setTimeout(() => { splash.style.display = 'none'; }, 800);
   }
 
   if (skip) skip.addEventListener('click', removeSplash);
-  if (splash) splash.addEventListener('click', (e) => {
-    if (e.target !== vid) removeSplash();
+  if (splash) splash.addEventListener('click', removeSplash);
+
+  // 3.5 seconds-la continuous melting GIF play aana apram auto-reveal
+  window.addEventListener('load', () => {
+    setTimeout(removeSplash, 3500);
   });
-
-  if (vid) {
-    vid.muted = true;
-    vid.defaultMuted = true;
-    vid.playsInline = true;
-
-    const promise = vid.play();
-    if (promise !== undefined) {
-      promise.catch(() => {
-        // Fallback: If browser restricts autoplay, user can click Enter Studio button
-        console.log('Mobile video autoplay requires user interaction');
-      });
-    }
-
-    vid.addEventListener('ended', removeSplash);
-    // Safety timer: video eppadiyum max 5 seconds-la close aagi site reveal aagidum
-    setTimeout(removeSplash, 5000);
-  } else {
-    setTimeout(removeSplash, 1500);
-  }
 })();
 
 // ================= PRODUCT DATA (14 ITEMS UPDATED) =================
